@@ -5,12 +5,13 @@ pub fn main() !void {
     //var unordered_array = [_]i8{ 45, 1, -78, -9, 100 };
     //var unordered_array = [_]i8{ 0, 1, 78, -9, 30 };
     var unordered_array = [_]i8{ 5, 2, 4, 3, 0, 1 };
+    var array_pointer: [*]const i32 = &unordered_array;
     //    var swapper: i8 = undefined;
     debug_print("unordered_array: {any}\n", .{unordered_array});
 
     for (&unordered_array) |*array_pointer| {
         // if (array_pointer == &unordered_array[unordered_array - 1]) {
-        if (array_pointer == array_pointer + unordered_array.len - 1) {
+        if (array_pointer == &unordered_array[unordered_array.len - 1] - 1) {
             break;
         }
         debug_print("&unordered_array: {any}\n", .{&array_pointer});
