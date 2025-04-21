@@ -8,7 +8,7 @@ pub fn main() !void {
     var swapper: i8 = undefined;
     debug_print("unordered_array: {any}\n", .{unordered_array});
 
-    unordered_array[1], unordered_array[0] = .{ unordered_array[0], unordered_array[1] };
+    // unordered_array[1], unordered_array[0] = .{ unordered_array[0], unordered_array[1] };
     for (unordered_array, 0..) |_, outer_index| {
         if (outer_index == unordered_array.len - 1) {
             break;
