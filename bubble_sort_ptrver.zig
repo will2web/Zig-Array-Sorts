@@ -22,7 +22,7 @@ pub fn main() !void {
         }
         debug_print("elem.*: {any}\t", .{elem.*});
         debug_print("elem: {*}\t", .{elem});
-        debug_print("elem - 1: {*}\t", .{elem - 1});
+        //  debug_print("elem - 1: {*}\t", .{elem - 1});
         debug_print("&elem: {any}\n", .{&elem});
         debug_print("&unordered_array: {any}\n", .{&array_pointer});
         debug_print("unordered_array slice: {any}\n", .{array_pointer[0..]});
